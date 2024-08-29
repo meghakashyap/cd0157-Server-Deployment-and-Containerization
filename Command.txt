@@ -1,0 +1,7 @@
+To This in window use poweshell.
+
+AWS
+
+$TOKEN = (curl -Method Post -Uri  a04cd3dcc5fdd475f90bd8ceea1cd5e3-641504659.us-east-2.elb.amazonaws.com/auth -Body '{"email":"megha_kashya@gamil.com","password":"meghapwd"}' -ContentType 'application/json' | ConvertFrom-Json).token  
+
+curl.exe --request GET 'a04cd3dcc5fdd475f90bd8ceea1cd5e3-641504659.us-east-2.elb.amazonaws.com/contents' -H "Authorization: Bearer ${TOKEN}" | jq .
